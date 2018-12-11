@@ -5,7 +5,7 @@ export default StyleSheet.create({
       flex: 1,
       justifyContent: 'space-around',
       paddingHorizontal: 25,
-      paddingBottom: 100
+      paddingBottom: 100,
     },
     logo:{
       width: 100,

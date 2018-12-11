@@ -7,8 +7,13 @@
     "test": "jest"
   },
   "dependencies": {
-    "react": "16.6.0-alpha.8af6728",
+    "react": "^16.6.0-alpha.8af6728",
+    "react-datepicker": "^2.0.0",
+    "react-dom": "^16.6.3",
     "react-native": "0.57.3",
+    "react-native-datepicker": "^1.7.2",
+    "react-native-parallax-scroll-view": "^0.21.3",
+    "react-native-ui-xg": "0.0.6",
     "react-navigation": "^2.18.0"
   },
   "devDependencies": {
