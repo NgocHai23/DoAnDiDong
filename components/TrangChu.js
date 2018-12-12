@@ -17,9 +17,13 @@ export default class TrangChu extends React.Component {
     }
   }
   
-  onPress=()=>{
+  DangNhap=()=>{  
     this.props.navigation.navigate('Login')  
   }
+  DangKi=()=>{
+    this.props.navigation.navigate('Register');  
+  }
+
 
   static navigationOptions = {
     title: 'Tìm việc',
@@ -60,10 +64,10 @@ export default class TrangChu extends React.Component {
           <Text style={{fontSize: 16, color:'#fff', fontWeight:'500'}}>Tìm việc</Text>
         </TouchableOpacity>
 
-        <TouchableHighlight style={styles.btn2} underlayColor={'#5882FA'} onPress={this.onPress}>
+        <TouchableHighlight style={styles.btn2} underlayColor={'#5882FA'} onPress={this.DangNhap}>
           <Text style={{fontSize: 13, color:'#000', fontWeight:'400'}}>Đăng nhập</Text>
         </TouchableHighlight>
-        <TouchableHighlight style={styles.btn2} underlayColor={'#5882FA'}>
+        <TouchableHighlight style={styles.btn2} underlayColor={'#5882FA'} onPress={this.DangKi}>
           <Text style={{fontSize: 13, color:'#000', fontWeight:'400'}}>Đăng kí</Text>
         </TouchableHighlight>
         

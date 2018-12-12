@@ -5,7 +5,7 @@ import { Text, View, Image, StatusBar,
          import DatePicker from 'react-native-datepicker';
 import styles from '../css/Styless';
 
-export default class TrangChu extends React.Component {
+export default class TaoCV extends React.Component {
   constructor(props){
     super(props);
     this.state = {

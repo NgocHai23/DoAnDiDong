@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View, Image, StatusBar, 
          TouchableOpacity, TouchableHighlight,ScrollView,
-         TextInput, Picker,CheckBox} from 'react-native';
+         TextInput, Picker,CheckBox, Alert} from 'react-native';
          import DatePicker from 'react-native-datepicker';
 import styles from '../css/Styless';
-export default class TrangChu extends React.Component {
+export default class showCongViec extends React.Component {
     constructor(props){
         super(props);
         this.state={
@@ -28,6 +28,10 @@ export default class TrangChu extends React.Component {
         }
       };
 
+      ChiTietCV=()=>{
+        this.props.navigation.navigate('ChiTietCV')
+      }
+
     render() {
         return (
             <ScrollView>
@@ -37,7 +41,7 @@ export default class TrangChu extends React.Component {
                     value={this.state.txtTimKiem}/>
 
                     <View style={styles.LuaChon}>
-                        <TouchableOpacity style={styles.btnLuaChon}>
+                        <TouchableOpacity style={styles.btnLuaChon} >
                             <Text style={{fontSize: 16, color:'#fff', fontWeight:'500'}}>Toàn TG</Text>
                          </TouchableOpacity>
                          <TouchableOpacity style={styles.btnLuaChon}>
@@ -48,12 +52,12 @@ export default class TrangChu extends React.Component {
                          </TouchableOpacity>
                     </View>
 
-                    <View style={styles.ChiTietCV}>
+                    <TouchableOpacity style={styles.ChiTietCV} onPress={this.ChiTietCV}>
                         <Text style ={styles.tenCV}>{this.state.txtTenCV}</Text>
                         <Text style ={styles.tenCTY}>{this.state.txtTenCTY}</Text>
                         <Text style ={styles.Vitri}>{this.state.txtVitri}</Text>
                         <Text style ={styles.Luong}>{this.state.txtLuong}</Text>
-                    </View>
+                    </TouchableOpacity>
 
 
 

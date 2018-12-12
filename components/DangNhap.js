@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Text, View, StatusBar, Image,
          TouchableOpacity, KeyboardAvoidingView,
-         TextInput, Alert } from 'react-native';
+         TextInput} from 'react-native';
 import styles from '../css/Styless';
 
 export default class DangNhap extends React.Component{
@@ -25,8 +25,9 @@ export default class DangNhap extends React.Component{
         }
     };
 
-    // onPress=()=>{
-    // }
+     TaoTK=()=>{
+      this.props.navigation.navigate('Register')  
+    }
 
     render() {
         return (
@@ -52,7 +53,7 @@ export default class DangNhap extends React.Component{
             <TouchableOpacity style={styles.btn1}>
               <Text style={{fontSize: 16, color:'#fff', fontWeight:'500'}}>Đăng nhập</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.btn1} onPress={this.onPress}>
+            <TouchableOpacity style={styles.btn1} onPress={this.TaoTK}>
               <Text style={{fontSize: 16, color:'#fff', fontWeight:'500'}} >Tạo tài khoản</Text>
             </TouchableOpacity>
           </View>
