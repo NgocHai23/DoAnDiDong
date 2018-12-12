@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, Image, StatusBar, 
-         TouchableOpacity, TouchableHighlight,
+         TouchableOpacity, TouchableHighlight,ScrollView,
          TextInput,Picker,CheckBox} from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import styles from '../css/Styless';
@@ -20,7 +20,9 @@ export default class TrangChu extends React.Component {
 
       txtTenCTY: "",
       txtChucDanh: "",
-      date:"2016-05-15",
+      dtNgayVaoLam:"2016-05-15",
+      dtNgayOut:"2016-05-15",
+      currentDate: new Date(),
     }
   }
 
@@ -36,7 +38,7 @@ export default class TrangChu extends React.Component {
   }
 
   static navigationOptions = {
-    title: 'Tìm việc',
+    title: 'Kinh nghiệm ứng cử viên',
     headerStyle:{
       backgroundColor: '#000'
     },
@@ -48,7 +50,8 @@ export default class TrangChu extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <ScrollView>
+        <View style={styles.container}>
         <StatusBar hidden/>
 
         <Image style={styles.logo} source={require('../assets/logo.png')}/>
@@ -96,57 +99,57 @@ export default class TrangChu extends React.Component {
           <Text style={{fontSize: 16, fontWeight: '500'}}>{this.state.titleNgayVaoLam}</Text>
         </Text>
         <DatePicker
-        style={{width: 200}}
-        date={this.state.date}
-        mode="date"
-        placeholder="select date"
-        format="YYYY-MM-DD"
-        minDate="2016-05-01"
-        maxDate="2016-06-01"
-        confirmBtnText="Confirm"
-        cancelBtnText="Cancel"
-        customStyles={{
-          dateIcon: {
-            position: 'absolute',
-            left: 0,
-            top: 4,
-            marginLeft: 0
-          },
-          dateInput: {
-            marginLeft: 36
-          }
-          // ... You can check the source to find the other keys.
-        }}
-        onDateChange={(date) => {this.setState({date: date})}}
+          style={{width: 200}}
+          date={this.state.date}
+          mode="date"
+          placeholder="select date"
+          format="YYYY-MM-DD"
+          minDate="2016-05-01"
+          maxDate="2016-06-01"
+          confirmBtnText="Confirm"
+          cancelBtnText="Cancel"
+          customStyles={{
+            dateIcon: {
+              position: 'absolute',
+              left: 0,
+              top: 4,
+              marginLeft: 0
+            },
+            dateInput: {
+              marginLeft: 36
+            }
+            // ... You can check the source to find the other keys.
+          }}
+          onDateChange={(date) => {this.setState({date: date})}}
       />
       
       
-      <Text style={{paddingLeft: 20}}>
+        <Text style={{paddingLeft: 20}}>
           <Text style={{fontSize: 16, fontWeight: '500'}}>{this.state.titleNgayOut}</Text>
         </Text>
         <DatePicker
-        style={{width: 200}}
-        date={this.state.date}
-        mode="date"
-        placeholder="select date"
-        format="YYYY-MM-DD"
-        minDate="2016-05-01"
-        maxDate="2016-06-01"
-        confirmBtnText="Confirm"
-        cancelBtnText="Cancel"
-        customStyles={{
-          dateIcon: {
-            position: 'absolute',
-            left: 0,
-            top: 4,
-            marginLeft: 0
-          },
-          dateInput: {
-            marginLeft: 36
-          }
-          // ... You can check the source to find the other keys.
-        }}
-        onDateChange={(date) => {this.setState({date: date})}}
+          style={{width: 200}}
+          date={this.state.date}
+          mode="date"
+          placeholder="select date"
+          format="YYYY-MM-DD"
+          minDate={this.state.dtNgayVaoLam}
+          maxDate={this.state.currentDate}
+          confirmBtnText="Confirm"
+          cancelBtnText="Cancel"
+          customStyles={{
+            dateIcon: {
+              position: 'absolute',
+              left: 0,
+              top: 4,
+              marginLeft: 0
+            },
+            dateInput: {
+              marginLeft: 36
+            }
+            // ... You can check the source to find the other keys.
+          }}
+          onDateChange={(date) => {this.setState({date: date})}}
       />
       <CheckBox
         center
@@ -156,9 +159,11 @@ export default class TrangChu extends React.Component {
         checked={this.state.checked}
       />
         <TouchableOpacity style={styles.btn1}>
-          <Text style={{fontSize: 16, color:'#fff', fontWeight:'500'}}>Tìm việc</Text>
+          <Text style={{fontSize: 16, color:'#fff', fontWeight:'500'}}>Lưu</Text>
         </TouchableOpacity>
       </View>
+      </ScrollView>
+     
     );
   }
 }

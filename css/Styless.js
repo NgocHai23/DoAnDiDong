@@ -6,6 +6,7 @@ export default StyleSheet.create({
       justifyContent: 'space-around',
       paddingHorizontal: 25,
       paddingBottom: 100,
+    
     },
     logo:{
       width: 100,
@@ -34,5 +35,49 @@ export default StyleSheet.create({
       borderWidth: 1,
       borderRadius: 18,
       borderColor: '#585858'
-    }
+    },
+
+    //showCong Viec
+    btnLuaChon:{
+      backgroundColor: '#2E2EFE',
+      borderRadius: 40,
+      alignItems: 'center',
+      padding: 8,
+      width:100,
+      backgroundColor:"yellow"
+  },
+  btnLuaChon:{
+    backgroundColor: '#2E2EFE',
+    borderRadius: 40,
+    alignItems: 'center',
+    padding: 8,
+    marginRight:3,
+    justifyContent: 'space-between',
+    width: '35%',
+},
+  LuaChon:{
+    marginTop:5,
+    flex: 1,
+    flexDirection: 'row',
+    alignItems:'center',
+  },
+
+  tenCV:{
+    fontSize:30,
+    
+
+  },
+  tenCTY:{
+    
+    fontSize:25,
+  },
+  Vitri:{
+    
+    fontSize:20,
+  },
+  Luong:{
+        
+    fontSize:15,
+  },
+
 });

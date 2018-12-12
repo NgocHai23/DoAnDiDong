@@ -16,7 +16,7 @@ export default class DangKi extends React.Component{
 
 
     static navigationOptions = {
-        title: 'Tìm việc',
+        title: 'Đăng kí tài khoản',
         headerStyle:{
           backgroundColor: '#000'
         },

@@ -15,7 +15,7 @@ export default class DangNhap extends React.Component{
 
 
     static navigationOptions = {
-        title: 'Tìm việc',
+        title: 'Đăng Nhập',
         headerStyle:{
           backgroundColor: '#000'
         },

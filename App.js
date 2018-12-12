@@ -4,6 +4,7 @@ import DangNhap from "./components/DangNhap";
 import DangKi from "./components/DangKi";
 import TaoCV from "./components/TaoCV";
 import TaoCV2 from "./components/TaoCV2";
+import showCongViec from "./components/showCongViec";
 
 const App = createStackNavigator({
   Home: { screen: TrangChu},
@@ -11,9 +12,9 @@ const App = createStackNavigator({
   Register:{screen: DangKi},
   TaoCV:{screen:TaoCV},
   TaoCV2:{screen:TaoCV2},
-
+  showCongViec:{screen:showCongViec},
 }, {
-  initialRouteName: 'TaoCV'
+  initialRouteName: 'Login'
 });
 
 
