@@ -64,7 +64,7 @@ export default StyleSheet.create({
 
   tenCV:{
     fontSize:30,
-    
+    borderColor:"#2E2EFE",
 
   },
   tenCTY:{
